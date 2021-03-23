@@ -13,3 +13,21 @@
         font-weight: #{$weight};
     }
 }
+
+@mixin mobile {
+    @media (min-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desctop {
+    @media (min-width: $desctop) {
+        @content;
+    }
+}
