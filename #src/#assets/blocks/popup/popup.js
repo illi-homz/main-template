@@ -1,4 +1,4 @@
-gz.gPopup = {
+gz.popup = {
     init()
     {
         this.body  = $('body')

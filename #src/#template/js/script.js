@@ -5,7 +5,9 @@
 @@include('@@webRoot/#assets/js/slick.min.js');
 @@include('@@webRoot/#assets/js/validator.js');
 @@include('@@webRoot/#assets/js/maskedinput.min.js');
-@@include('@@webRoot/#assets/js/air-datepicker.js');
+
+// blocks
+@@include('@@webRoot/#assets/blocks/air-datepicker/air-datepicker.js');
 
 
 const gz = {
@@ -22,7 +24,7 @@ const gz = {
     },
 }
 
-@@include('../../#assets/js/g-select.js')
+@@include('@@webRoot/#assets/blocks/select/select.js')
 
 
 gz.init = function() {
