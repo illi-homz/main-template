@@ -35,7 +35,7 @@ let path = {
         css: `${project_folder}/`,
         js: `${project_folder}/`,
         img: `${project_folder}/`,
-        fonts: `${project_folder}/`
+        fonts: `${project_folder}/fonts`
     },
     src: {
         html: [
@@ -194,7 +194,7 @@ function images() {
 
 function fonts() {
     return src(path.src.fonts)
-        .pipe(dest(path.build.fonts))
+        .pipe(dest(path.build.fonts, {overwrite: true}))
 }
 
 
