@@ -1,6 +1,6 @@
 'use strict';
 
-gz.gSelect = {
+gz.select = {
     open($select)
         {
             $select.children('._options').first().slideDown(300)

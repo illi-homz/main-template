@@ -1,11 +1,13 @@
 'use strict';
 
-@@include('../#assets/js/webp.js');
-@@include('../#assets/js/jquery.min.js');
-@@include('../#assets/js/slick.min.js');
-@@include('../#assets/js/validator.js');
-@@include('../#assets/js/maskedinput.min.js');
-@@include('../#assets/js/air-datepicker.js');
+@@include('@@webRoot/#assets/js/webp.js');
+@@include('@@webRoot/#assets/js/jquery.min.js');
+@@include('@@webRoot/#assets/js/slick.min.js');
+@@include('@@webRoot/#assets/js/validator.js');
+@@include('@@webRoot/#assets/js/maskedinput.min.js');
+
+// blocks
+@@include('@@webRoot/#assets/blocks/air-datepicker/air-datepicker.js');
 
 
 const gz = {
@@ -22,7 +24,7 @@ const gz = {
     },
 }
 
-@@include('../#assets/js/g-select.js')
+@@include('@@webRoot/#assets/blocks/select/select.js')
 
 
 gz.init = function() {

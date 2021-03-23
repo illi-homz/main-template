@@ -5,42 +5,19 @@ const wait = require('gulp-wait');
 
 let fs = require('fs');
 
-// let path = {
-//     build: {
-//         html: `${project_folder}/`,
-//         css: `${project_folder}/css/`,
-//         js: `${project_folder}/js/`,
-//         img: `${project_folder}/img/`,
-//         fonts: `${project_folder}/fonts/`
-//     },
-//     src: {
-//         html: [`${source_folder}/*.html`, `!${source_folder}/_*.html`],
-//         css: `${source_folder}/scss/style.scss`,
-//         js: `${source_folder}/js/script.js` + '',
-//         img: `${source_folder}/img/**/*.{jpg,png,svg,gif,ico,webp}`,
-//         fonts: `${source_folder}/fonts/*.ttf`
-//     },
-//     watch: {
-//         html: `${source_folder}/**/*.html`,
-//         css: `${source_folder}/scss/**/*.scss`,
-//         js: `${source_folder}/js/**/*.js`,
-//         img: `${source_folder}/img/**/*.{jpg,png,svg,gif,ico,webp}`,
-//     },
-//     clean: `./${project_folder}/`
-// }
-
 let path = {
     build: {
         html: `${project_folder}/`,
         css: `${project_folder}/`,
         js: `${project_folder}/`,
-        img: `${project_folder}/`,
-        fonts: `${project_folder}/fonts`
+        img: `./${project_folder}/img`,
+        fonts: `./${project_folder}/fonts`
     },
     src: {
         html: [
             `${source_folder}/**/*.html`,
             `!${source_folder}/**/_*.html`,
+            `!${source_folder}/**/#assets/**/*.html`,
             `!${source_folder}/**/#template/**/*.html`
         ],
         css: [
@@ -51,8 +28,8 @@ let path = {
             `${source_folder}/**/js/script.js`,
             `!${source_folder}/**/#template/**/*.js`
         ],
-        img: `${source_folder}/**/img/**/*.{jpg,png,svg,gif,ico,webp}`,
-        fonts: `${source_folder}/**/fonts/*.{ttf,eot,woff,woff2}`
+        img: `./${source_folder}/#assets/img/**/*.{jpg,png,svg,gif,ico,webp}`,
+        fonts: `./${source_folder}/#assets/fonts/*.{ttf,eot,woff,woff2}`
     },
     watch: {
         html: `${source_folder}/**/*.html`,
@@ -194,7 +171,7 @@ function images() {
 
 function fonts() {
     return src(path.src.fonts)
-        .pipe(dest(path.build.fonts, {overwrite: true}))
+        .pipe(dest(path.build.fonts))
 }
 
 
