@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/fonts/Helvetica-Bold.eot');
+    src: url('/fonts/Helvetica-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Helvetica-Bold.woff2') format('woff2'),
+        url('/fonts/Helvetica-Bold.woff') format('woff'),
+        url('/fonts/Helvetica-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/fonts/Helvetica.eot');
+    src: url('/fonts/Helvetica.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Helvetica.woff2') format('woff2'),
+        url('/fonts/Helvetica.woff') format('woff'),
+        url('/fonts/Helvetica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/fonts/Helvetica-Light.eot');
+    src: url('/fonts/Helvetica-Light.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Helvetica-Light.woff2') format('woff2'),
+        url('/fonts/Helvetica-Light.woff') format('woff'),
+        url('/fonts/Helvetica-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}

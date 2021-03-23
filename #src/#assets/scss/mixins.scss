@@ -1,0 +1,15 @@
+@mixin font-set ($fsz:14, $lh:16px, $fw:400, $space:'normal') {
+    font-size: $fsz+px;
+    line-height: $lh;
+    font-weight: $fw;
+    letter-spacing: $space+px;
+}
+
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url('../fonts/#{$file_name}.woff') format('woff'), url('../fonts/#{file_name}.woff2') format('woff2');
+        font-weight: #{$weight};
+    }
+}

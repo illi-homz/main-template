@@ -1,0 +1,36 @@
+@import 'null';
+@import 'variables';
+@import 'mixins';
+@import 'tipografy';
+@import 'fragments';
+@import 'fonts';
+
+// blocks
+@import 'header';
+@import 'footer';
+
+*
+{
+    font-family: 'Helvetica', sans-serif;
+    @include font-set(18, 21px, 400);
+    color: #222;
+}
+
+body
+{
+    .lock {overflow: hidden;}
+}
+
+.container
+{
+    max-width: ($lg+32)+px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.row {display: flex;}
+
+.col {flex: 1 0;}
+
+.text-center {text-align: center;}
